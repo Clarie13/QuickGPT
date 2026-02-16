@@ -9,7 +9,7 @@ export const stripewebhooks = async(request, response  )=>{
     let event;
     try {
         event= stripe.webhooks.constructEvent(request.body, sig,
-             process.env.STRIPE_WEBHOOK_SECRET )
+             process.env.STRIPE_WEBHOOK_SECRET)
     } catch (error) {
         return response.status(400).send(`Webhok Error:$(error.message)`)
     }
@@ -17,9 +17,9 @@ export const stripewebhooks = async(request, response  )=>{
     try {
         switch (event.type) {
             case "payment_intent.succeeded":{
-                const paymenIntent= event.data.object;
+                const paymentIntent= event.data.object;
                 const sessionList= await stripe.checkout.sessions.list({
-                    payment_intent: paymenIntent.id,
+                    payment_intent: paymentIntent.id,
                 })
 
                 const session = sessionList.data[0];
