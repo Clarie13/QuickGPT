@@ -1,0 +1,15 @@
+<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0.5" y="0.5" width="43" height="43" rx="8" fill="#FFFFFF" stroke="#E5E7EB"/>
+
+  <!-- Icon -->
+  <rect x="6" y="6" width="32" height="32" rx="7" fill="url(#iconGrad)"/>
+  <path d="M22 10 L15 25 H19 L17 36 L29 20 H23 Z" fill="#FFFFFF"/>
+</svg>
